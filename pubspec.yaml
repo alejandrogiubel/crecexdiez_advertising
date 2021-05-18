@@ -1,8 +1,8 @@
 name: crecexdiez_advertising
 description: A CreceXDiez Advertising Platform Flutter plugin.
 version: 0.1.0
-author:
-homepage:
+author: Alejandro Giubel Hernandez Arbelo
+homepage: https://github.com/alejandrogiubel/crecexdiez_advertising
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
