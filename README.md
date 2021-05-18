@@ -1,15 +1,24 @@
-# crecexdiez_advertising
-
-A new Flutter plugin.
+# CreceXDiez Advertising
+A CreceXDiez Advertising Platform Flutter plugin.
 
 ## Getting Started
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+### Add dependency
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```yaml
+dependencies:
+  crecexdiez_advertising: ^0.1.0
+```
 
+### Just use it
+```dart
+import 'package:crecexdiez_advertising/crecexdiez_advertising.dart';
+  CrecexdiezAdvertising(
+    id: 12,
+    height: 100,
+    width: 100,
+  ),
+```
+
+## CreceXDiez
+https://crecexdiez.com.
