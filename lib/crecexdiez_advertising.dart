@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
@@ -9,7 +10,7 @@ class CrecexdiezAdvertising extends StatefulWidget {
   final int width;
   final int height;
 
-  CrecexdiezAdvertising({@required this.id, this.width = 300, this.height = 300});
+  CrecexdiezAdvertising({required this.id, this.width = 300, this.height = 300});
 
   @override
   _CrecexdiezAdvertisingState createState() => _CrecexdiezAdvertisingState();
@@ -27,7 +28,7 @@ class _CrecexdiezAdvertisingState extends State<CrecexdiezAdvertising> {
   Widget build(BuildContext context) {
     return FutureBuilder(
       future: getImageFromCrecexdiez(),
-      builder: (BuildContext _, AsyncSnapshot<List<int>> snapShot) {
+      builder: (BuildContext _, AsyncSnapshot<List<int>?> snapShot) {
         if (snapShot.hasData) {
           return Column(
             mainAxisSize: MainAxisSize.min,
@@ -37,7 +38,7 @@ class _CrecexdiezAdvertisingState extends State<CrecexdiezAdvertising> {
                 height: widget.height.toDouble(),
                 child: Stack(
                   children: [
-                    Image.memory(snapShot.data),
+                    Image.memory(snapShot.data as Uint8List),
                     Material(
                       color: Colors.transparent,
                       child: InkWell(
@@ -72,7 +73,7 @@ class _CrecexdiezAdvertisingState extends State<CrecexdiezAdvertising> {
     );
   }
 
-  Future<List<int>>getImageFromCrecexdiez() async {
+  Future<List<int>?>getImageFromCrecexdiez() async {
     Response<List<int>> rs;
     rs = await Dio().get<List<int>>('https://crecexdiez.com/s/i/${widget.id}/${widget.width}x${widget.height}',
       options: Options(responseType: ResponseType.bytes), // set responseType to `bytes`

@@ -31,8 +31,8 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: CrecexdiezAdvertising(
             id: 12,
-            height: 100,
-            width: 100,
+            height: 300,
+            width: 300,
           ),
         ),
       ),
