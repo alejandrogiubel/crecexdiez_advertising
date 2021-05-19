@@ -7,17 +7,17 @@ A CreceXDiez Advertising Platform Flutter plugin.
 
 ```yaml
 dependencies:
-  crecexdiez_advertising: ^0.1.0
+  crecexdiez_advertising: ^0.1.2
 ```
 
 ### Just use it
 ```dart
 import 'package:crecexdiez_advertising/crecexdiez_advertising.dart';
-  CrecexdiezAdvertising(
-    id: 12,
-    height: 100,
-    width: 100,
-  ),
+    Crecex10Advertising(
+      id: 12,
+      height: 300,
+      width: 300,
+    ),
 ```
 
 ## CreceXDiez

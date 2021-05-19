@@ -1,3 +1,7 @@
+# 0.1.2
+
+* Bug fixes and documentation improved.
+
 # 0.1.1
 
 * Fixed some bug.

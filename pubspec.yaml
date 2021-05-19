@@ -1,6 +1,6 @@
 name: crecexdiez_advertising
 description: A CreceXDiez Advertising Platform Flutter plugin. This package allows you to automatically display ads generated through the CrecexDiez ads platform in your flutter application.
-version: 0.1.1
+version: 0.1.2
 homepage: https://github.com/alejandrogiubel/crecexdiez_advertising
 
 environment:

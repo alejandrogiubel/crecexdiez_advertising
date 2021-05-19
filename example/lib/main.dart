@@ -1,8 +1,5 @@
 import 'package:crecexdiez_advertising/crecexdiez_advertising.dart';
 import 'package:flutter/material.dart';
-import 'dart:async';
-
-import 'package:flutter/services.dart';
 
 void main() {
   runApp(MyApp());
