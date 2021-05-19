@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
           title: const Text('CreceXDiez Advertising example app'),
         ),
         body: Center(
-          child: CrecexdiezAdvertising(
+          child: Crecex10Advertising(
             id: 12,
             height: 300,
             width: 300,
