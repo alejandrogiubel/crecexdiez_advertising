@@ -1,3 +1,7 @@
+# 0.2.0
+
+* Added some customizations and cyclical ads.
+
 # 0.1.2
 
 * Bug fixes and documentation improved.
