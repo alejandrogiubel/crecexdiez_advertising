@@ -28,8 +28,10 @@ class _MyAppState extends State<MyApp> {
         body: Center(
           child: Crecex10Advertising(
             id: 12,
-            height: 300,
-            width: 300,
+            height: 100,
+            width: 320,
+            borderRadius: 10,
+            adsIntervals: Duration(seconds: 10),
           ),
         ),
       ),
