@@ -7,7 +7,7 @@ A CreceXDiez Advertising Platform Flutter plugin.
 
 ```yaml
 dependencies:
-  crecexdiez_advertising: ^0.2.0
+  crecexdiez_advertising: ^0.3.0
 ```
 
 ### Just use it
@@ -19,6 +19,7 @@ import 'package:crecexdiez_advertising/crecexdiez_advertising.dart';
         width: 320,
         borderRadius: 10,
         adsIntervals: Duration(seconds: 10),
+        showCloseButton: true,
     ),
 ```
 

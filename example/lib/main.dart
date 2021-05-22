@@ -30,6 +30,7 @@ class _MyAppState extends State<MyApp> {
             width: 320,
             borderRadius: 10,
             adsIntervals: Duration(seconds: 10),
+            showCloseButton: true,
           ),
         ),
       ),

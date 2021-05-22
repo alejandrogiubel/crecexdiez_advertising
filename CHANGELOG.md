@@ -1,3 +1,7 @@
+# 0.3.0
+
+* Added ad tag and close button.
+
 # 0.2.0
 
 * Added some customizations and cyclical ads.
