@@ -51,18 +51,25 @@ class Crecex10Advertising extends StatefulWidget {
 
 class _Crecex10AdvertisingState extends State<Crecex10Advertising>
     with TickerProviderStateMixin {
-  bool closed = false;
+  bool _closed = false;
+  late Timer _timer;
   @override
   void initState() {
     super.initState();
-    Timer.periodic(widget.adsIntervals, (timer) {
+    _timer = Timer.periodic(widget.adsIntervals, (timer) {
       setState(() {});
     });
   }
 
   @override
+  void dispose() {
+    _timer.cancel();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return !closed
+    return !_closed
         ? FutureBuilder(
             future: getImageFromCrecex10(),
             builder: (BuildContext _, AsyncSnapshot<List<int>?> snapShot) {
@@ -162,7 +169,7 @@ class _Crecex10AdvertisingState extends State<Crecex10Advertising>
                 borderRadius: BorderRadius.circular(1000),
                 onTap: () {
                   setState(() {
-                    closed = true;
+                    _closed = true;
                   });
                 },
                 child: Center(
