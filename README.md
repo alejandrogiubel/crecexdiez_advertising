@@ -7,7 +7,7 @@ A CreceXDiez Advertising Platform Flutter plugin.
 
 ```yaml
 dependencies:
-  crecexdiez_advertising: ^0.3.0
+  crecexdiez_advertising: ^0.4.0
 ```
 
 ### Just use it

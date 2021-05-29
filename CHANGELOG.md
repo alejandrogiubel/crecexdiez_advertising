@@ -1,3 +1,12 @@
+
+# 0.4.0
+
+* Without an internet connection, the widget is hidden.
+
+# 0.3.1
+
+* Some bugs fixed.
+
 # 0.3.0
 
 * Added ad tag and close button.

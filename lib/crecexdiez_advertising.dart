@@ -73,6 +73,7 @@ class _Crecex10AdvertisingState extends State<Crecex10Advertising>
         ? FutureBuilder(
             future: getImageFromCrecex10(),
             builder: (BuildContext _, AsyncSnapshot<List<int>?> snapShot) {
+              print(snapShot.connectionState);
               if (snapShot.hasData) {
                 return Column(
                   mainAxisSize: MainAxisSize.min,
@@ -125,9 +126,11 @@ class _Crecex10AdvertisingState extends State<Crecex10Advertising>
                     )
                   ],
                 );
-              } else {
+              } else if (snapShot.connectionState == ConnectionState.waiting) {
                 return Container(
                     width: 50, height: 50, child: CircularProgressIndicator());
+              } else {
+                return SizedBox.shrink();
               }
             })
         : const SizedBox.shrink();
