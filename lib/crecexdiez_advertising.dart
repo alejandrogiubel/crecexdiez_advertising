@@ -24,7 +24,7 @@ class Crecex10Advertising extends StatefulWidget {
   /// Define the style of the bottom text of the ad
   final TextStyle? textStyle;
 
-  /// Define the intervals durations between ads
+  /// Define the intervals durations between ads. Change intervals need hot restart.
   final Duration adsIntervals;
 
   /// Show close button for dispose the ad
@@ -43,7 +43,8 @@ class Crecex10Advertising extends StatefulWidget {
       this.textStyle,
       this.showCloseButton = false,
       this.showAdLabel = true,
-      this.adsIntervals = const Duration(seconds: 5)});
+      this.adsIntervals = const Duration(seconds: 10)})
+      : assert(adsIntervals >= Duration(seconds: 3));
 
   @override
   _Crecex10AdvertisingState createState() => _Crecex10AdvertisingState();
@@ -73,7 +74,6 @@ class _Crecex10AdvertisingState extends State<Crecex10Advertising>
         ? FutureBuilder(
             future: getImageFromCrecex10(),
             builder: (BuildContext _, AsyncSnapshot<List<int>?> snapShot) {
-              print(snapShot.connectionState);
               if (snapShot.hasData) {
                 return Column(
                   mainAxisSize: MainAxisSize.min,
@@ -126,9 +126,6 @@ class _Crecex10AdvertisingState extends State<Crecex10Advertising>
                     )
                   ],
                 );
-              } else if (snapShot.connectionState == ConnectionState.waiting) {
-                return Container(
-                    width: 50, height: 50, child: CircularProgressIndicator());
               } else {
                 return SizedBox.shrink();
               }
@@ -194,8 +191,7 @@ class _Crecex10AdvertisingState extends State<Crecex10Advertising>
     Response<List<int>> rs;
     rs = await Dio().get<List<int>>(
       'https://crecexdiez.com/s/i/${widget.id}/${widget.width}x${widget.height}',
-      options: Options(
-          responseType: ResponseType.bytes), // set responseType to `bytes`
+      options: Options(responseType: ResponseType.bytes),
     );
     return rs.data;
   }

@@ -1,3 +1,6 @@
+# 0.4.1
+
+* Blink bug fixed. Minimum ad duration set to 3 seconds.
 
 # 0.4.0
 
